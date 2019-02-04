@@ -1,20 +1,20 @@
-import {HTTP_DOMEN, HEADER_CONTENT_TYPE, JSON_CONTENT_TYPE, POST, GET} from '../../constants/HttpConstants';
+import { HTTP_DOMEN, HEADER_CONTENT_TYPE, JSON_CONTENT_TYPE, POST, GET } from '../../constants/HttpConstants';
 
 class Transport {
 
-    private domen: any = HTTP_DOMEN;
+    private domen = HTTP_DOMEN;
 
     public async doGet(url: string) {
         return this.send(GET, url);
     }
 
-    public async doPost(url: string, data: any = {}) {
+    public async doPost(url: string, data = {}) {
         return this.send(POST, url, data);
     }
 
-    private async send(method: string, url: string = '/', data: any = {}, headers: any = []) {
-        const options: any = {
-            method: method,
+    private async send(method: string, url: string = '/', data = {}) {
+        const options = {
+            method,
             mode: 'cors',
             credentials: 'include'
         };
@@ -34,5 +34,5 @@ class Transport {
     }
 }
 
-const transport: any = new Transport();
+const transport = new Transport();
 export default transport;
