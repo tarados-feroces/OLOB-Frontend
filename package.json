@@ -6,8 +6,6 @@
   "scripts": {
     "build": "webpack --mode development",
     "tslint": "tslint -p ./ -c ./tslint.json 'src/**/*.ts' 'src/**/*.tsx'",
-    "server_install": "cd server && docker build -t tft_back:tft_back -f Dockerfile ./",
-    "server": "docker run -p 5000:5000 --rm -it --name tft_back tft_back:tft_back",
     "start": "webpack-dev-server --mode development --inline"
   },
   "pre-commit": [
@@ -15,14 +13,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tarados-feroces/Tracker.git"
+    "url": "git+https://github.com/tarados-feroces/OLOB-Frontend.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tarados-feroces/Tracker/issues"
+    "url": "https://github.com/tarados-feroces/OLOB-Frontend/issues"
   },
-  "homepage": "https://github.com/tarados-feroces/Tracker#readme",
+  "homepage": "https://github.com/tarados-feroces/OLOB-Frontend#readme",
   "devDependencies": {
     "@types/classnames": "2.2.3",
     "@types/file-saver": "^1.3.0",
