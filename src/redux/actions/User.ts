@@ -32,7 +32,7 @@ export function loginUser(data) {
         const response = await transport.doPost(HttpConstants.LOGIN, data);
         const json = await response.json();
         if (response.ok) {
-            dispatch(signup({ ...json, isAuthorized: true }));
+            dispatch(login({ ...json, isAuthorized: true }));
         }
     };
 }
