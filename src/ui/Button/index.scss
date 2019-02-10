@@ -1,23 +1,49 @@
+@import '../../static/config.scss';
+
 .ui-button {
+    display: flex;
     align-items: center;
     justify-content: center;
-    
+    color: $button-text-color;
+    background-color: $button-color;
+    width: 60px;
+    height: 30px;
+    // font-family: $button-font-family;
+    border: thin black solid;
+    cursor: pointer;
 
-    &_small {
-
+    &:hover {
+        background-color: $button-hover-color;
     }
 
-    &_medium {
-
+    &:active {
+        background-color: $button-active-color;
     }
 
-    &_large {
+    &_size_small {
+        font-size: 15px;
+        width: 70px;
+        height: 32px;
+    }
 
+    &_size_medium {
+        font-size: 20px;
+        width: 90px;
+        height: 40px;
+    }
+
+    &_size_large {
+        font-size: 25px;
+        width: 120px;
+        height: 50px;
     }
 
 
     &__text {
         display: flex;
-
+        font-size: inherit;
+        font-family: inherit;
+        color: inherit;
+        cursor: pointer;
     }
 }

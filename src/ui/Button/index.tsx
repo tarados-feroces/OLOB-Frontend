@@ -17,7 +17,7 @@ export default class Button extends React.Component<ButtonProps> {
 
         return (
             <div className={b({ size })} onClick={onClick}>
-                <p className={b('text', { size })}>{text}</p>
+                <p className={b('text')}>{text}</p>
             </div>
         );
     }
