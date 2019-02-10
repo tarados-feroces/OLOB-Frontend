@@ -1,0 +1,19 @@
+.section {
+  width: 100%;
+  display: flex;
+  background-color: aquamarine;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 300px;
+
+  &__title {
+    font-size: 48px;
+    align-self: center;
+  }
+
+  &__content {
+    width: 80%;
+    background-color: aliceblue;
+    align-self: center;
+  }
+}
