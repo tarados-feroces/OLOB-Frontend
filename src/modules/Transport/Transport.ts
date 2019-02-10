@@ -16,9 +16,7 @@ class Transport {
         const options: RequestInit = {
             method,
             mode: 'cors',
-            credentials: 'include',
-            body: undefined,
-            headers: undefined
+            credentials: 'include'
         };
 
         if (method === POST) {
@@ -29,10 +27,10 @@ class Transport {
             options.headers = headers;
         }
 
-        // return fetch(`${this.domen}${url}`, options)
-        //     .then((response) => {
-        //         return response;
-        //     });
+        return fetch(`${this.domen}${url}`, options)
+            .then((response) => {
+                return response;
+            });
     }
 }
 
