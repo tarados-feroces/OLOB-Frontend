@@ -1,13 +1,5 @@
 import { HTTP_DOMEN, HEADER_CONTENT_TYPE, JSON_CONTENT_TYPE, POST, GET } from '../../constants/HttpConstants';
 
-interface HttpRequestOptions {
-    method: string;
-    mode: RequestMode;
-    credentials: RequestCredentials;
-    body?: string;
-    headers?: Headers;
-}
-
 class Transport {
 
     private domen = HTTP_DOMEN;
@@ -21,7 +13,7 @@ class Transport {
     }
 
     private async send(method: string, url: string = '/', data = {}) {
-        const options: HttpRequestOptions = {
+        const options: RequestInit = {
             method,
             mode: 'cors',
             credentials: 'include'
