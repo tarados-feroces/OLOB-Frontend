@@ -13,7 +13,7 @@ class Transport {
     }
 
     private async send(method: string, url: string = '/', data = {}) {
-        const options = {
+        const options: RequestInit = {
             method,
             mode: 'cors',
             credentials: 'include'
