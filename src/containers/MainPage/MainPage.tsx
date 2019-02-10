@@ -8,7 +8,6 @@ export default class MainPage extends React.Component {
         return (
             <Section
                 title={'HEllo!'}
-                content={'Это первый контент'}
             />
         );
     }
