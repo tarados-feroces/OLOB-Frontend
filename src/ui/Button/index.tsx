@@ -6,7 +6,7 @@ import './index.scss';
 interface ButtonProps {
     onClick(): void;
     text: string;
-    size?: string;
+    size?: 'small' | 'medium' | 'large';
 }
 
 const b = block('ui-button');
@@ -17,7 +17,7 @@ export default class Button extends React.Component<ButtonProps> {
 
         return (
             <div className={b({ size })} onClick={onClick}>
-                <p className={b('text')}>{text}</p>
+                <p className={b('text', { size })}>{text}</p>
             </div>
         );
     }

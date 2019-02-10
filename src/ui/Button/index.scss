@@ -1,9 +1,23 @@
 .ui-button {
     align-items: center;
     justify-content: center;
+    
+
+    &_small {
+
+    }
+
+    &_medium {
+
+    }
+
+    &_large {
+
+    }
+
 
     &__text {
         display: flex;
-        
+
     }
 }
