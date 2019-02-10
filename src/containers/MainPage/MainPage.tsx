@@ -6,7 +6,10 @@ import Section from '../../components/Section/index';
 export default class MainPage extends React.Component {
     public render(): JSX.Element {
         return (
-            <Section />
+            <Section
+                title={'HEllo!'}
+                content={'Это первый контент'}
+            />
         );
     }
 }

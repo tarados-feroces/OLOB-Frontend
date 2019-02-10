@@ -1,24 +1,25 @@
 import * as React from 'react';
 import { block } from 'bem-cn';
 
-import './index.scss.scss';
+import './index.scss';
 
 interface SectionProps {
-    headerContent?: string;
+    title?: string;
+    content?: string;
 }
 
 export default class Section extends React.Component<SectionProps> {
     public render() {
         const b = block('section');
-        const { headerContent } = this.props;
+        const { title, content } = this.props;
 
         return (
-            <div className={'section'}>
-                <div className={'section__title'}>
-                    {{ headerContent }}
+            <div className={b()}>
+                <div className={b('title')}>
+                    {title}
                 </div>
-                <div className={'section__content'}>
-                    Это контент
+                <div className={b('content')}>
+                    {content}
                 </div>
             </div>
         );
