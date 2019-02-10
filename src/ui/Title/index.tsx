@@ -15,7 +15,7 @@ export default class Title extends React.Component<TitleProps> {
         const { text, size } = this.props;
 
         return (
-            <h1 className={b({ size })}> {text} </h1>
+            <h1 className={b({ size })}>{text}</h1>
         );
     }
 }
