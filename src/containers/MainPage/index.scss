@@ -1,0 +1,23 @@
+.main-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__header {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background-color: aliceblue;
+    }
+
+    &__section {
+        display: flex;
+        width: 100%;
+        height: 500px;
+        background-color: antiquewhite;
+
+        &_direction_row {
+            flex-direction: row;
+        }
+    }
+}

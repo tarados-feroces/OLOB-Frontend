@@ -4,6 +4,8 @@ import App from './containers/App/App';
 import { Provider } from 'react-redux';
 import configureStore from './store/store';
 
+import '../src/static/_reset.scss';
+
 const store = configureStore({});
 
 ReactDOM.render(
