@@ -4,7 +4,7 @@ import { block } from 'bem-cn';
 import './index.scss';
 
 interface TitleProps {
-    text?: string;
+    text: string;
     size?: 'small' | 'medium' | 'large';
 }
 
@@ -15,7 +15,7 @@ export default class Title extends React.Component<TitleProps> {
         const { text, size } = this.props;
 
         return (
-            <h1 className={b({ size })}>{text}</h1>
+            <h1 className={b({ size: size || 'medium' })}>{text}</h1>
         );
     }
 }
