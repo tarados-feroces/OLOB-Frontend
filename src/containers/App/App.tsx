@@ -5,7 +5,7 @@ import { createBrowserHistory } from 'history';
 import { bindActionCreators } from 'redux';
 import * as PathConstants from '../../constants/PathsConstants';
 
-import MainPage from '../MainPage/MainPage';
+import MainPage from '../MainPage';
 
 const history = createBrowserHistory();
 
