@@ -4,7 +4,7 @@ import { block } from 'bem-cn';
 import './index.scss';
 
 interface ListProps {
-    data?: string[];
+    data: string[];
 }
 
 const b = block('ui-list');

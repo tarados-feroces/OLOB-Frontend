@@ -3,10 +3,11 @@ import * as React from 'react';
 import { block } from 'bem-cn';
 
 import './index.scss';
-import Section from '../../components/Section/index';
+import Section from '../../ui/Section';
 import TextBlock from '../../ui/TextBlock';
 import Button from '../../ui/Button';
 import Title from '../../ui/Title';
+import List from '../../ui/List';
 
 const b = block('main-page');
 
@@ -44,7 +45,7 @@ export default class MainPage extends React.Component {
                 </div>
                 <div className={b('section')}>
                     <Section title={'Что мы даем?'}>
-                        <TextBlock text={textObject['Что мы даем?'][0]} />
+                        <List data={textObject['Что мы даем?']} />
                     </Section>
                 </div>
                 <div className={b('section')}>
