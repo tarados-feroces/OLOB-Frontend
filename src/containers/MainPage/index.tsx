@@ -3,11 +3,7 @@ import * as React from 'react';
 import { block } from 'bem-cn';
 
 import './index.scss';
-import Section from '../../ui/Section';
-import TextBlock from '../../ui/TextBlock';
-import Button from '../../ui/Button';
 import Title from '../../ui/Title';
-import List from '../../ui/List';
 import SlideShow from '../../components/SlideShow';
 
 const b = block('main-page');
@@ -29,7 +25,7 @@ const textObject = {
 };
 
 export default class MainPage extends React.Component {
-    public render(): JSX.Element {
+    public render() {
         return (
             <div className={b()}>
                 <div className={b('header')}>
