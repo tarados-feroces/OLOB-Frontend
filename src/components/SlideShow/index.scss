@@ -10,8 +10,8 @@
         color: blue;
         margin-bottom: 20px;
     }
-}
 
-.img {
-    height: $slideshow-height;
+    &__slide-back {
+        height: $slideshow-height;
+    }
 }

@@ -40,9 +40,9 @@ export default class SlideShow extends React.Component<SlideShowProps, SlideShow
                 onSelect={this.handleSelect}
                 className={b()}
             >
-                <Carousel.Item className={b('get-started-slide')}>
+                <Carousel.Item>
                     <img
-                        className="d-block w-100 img"
+                        className={b('slide-back').mix('d-block w-100')}
                         src="https://i.ytimg.com/vi/-CBiVN7N-4k/maxresdefault.jpg"
                     />
                     <Carousel.Caption>
@@ -52,9 +52,9 @@ export default class SlideShow extends React.Component<SlideShowProps, SlideShow
                         </Button>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item className={b('about-us-slide')}>
+                <Carousel.Item>
                     <img
-                        className="d-block w-100 img"
+                        className={b('slide-back').mix('d-block w-100')}
                     />
                     <Carousel.Caption>
                         <Button variant={'outline-light'} size={'lg'} disabled={true} onClick={onGalleryClick}>
