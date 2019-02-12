@@ -21,9 +21,10 @@
         height: 500px;
         background-color: black;
         justify-content: center;
-
-        &_direction_row {
-            flex-direction: row;
+      
+        &_item {
+          flex-basis: 50%;
+          color: red;
         }
     }
 

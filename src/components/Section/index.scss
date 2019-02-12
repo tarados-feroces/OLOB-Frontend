@@ -1,0 +1,14 @@
+.section {
+  width: 80%;
+  //height: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+
+  &_item {
+    width: 50%;
+    align-self: center;
+    flex: 1 1 0;
+    color: red;
+  }
+}
