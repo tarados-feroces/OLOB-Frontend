@@ -6,16 +6,17 @@ import './index.scss';
 interface TitleProps {
     text: string;
     size?: 'small' | 'medium' | 'large';
+    className?: string;
 }
 
 const b = block('ui-title');
 
 export default class Title extends React.Component<TitleProps> {
     public render() {
-        const { text, size } = this.props;
+        const { text, size, className } = this.props;
 
         return (
-            <h1 className={b({ size: size || 'medium' })}>{text}</h1>
+            <h1 className={b({ size: size || 'medium' }).mix(className)}>{text}</h1>
         );
     }
 }
