@@ -5,23 +5,18 @@ import { block } from 'bem-cn';
 import './index.scss';
 import Title from '../../ui/Title';
 import SlideShow from '../../components/SlideShow';
+import Section from '../../components/Section';
 
 const b = block('main-page');
 
 const textObject = {
     'Что это?':
         `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+        incididunt ut labore et dolore magna aliqua.`,
     'Что мы даем?': [ 'Lol', 'Kek', 'Cheburek' ],
     'Для кого наш продукт?' :
         `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
+        incididunt ut labore et dolore magna aliqua.`
 };
 
 export default class MainPage extends React.Component {
@@ -35,6 +30,23 @@ export default class MainPage extends React.Component {
                     <div className={b('slideshow-container')}>
                         <SlideShow />
                     </div>
+                </div>
+                <div className={b('section')}>
+                    <Section
+                        title={'Hello World!'}
+                        imageSrc={'./images/forest.jpg'}
+                        text={textObject['Для кого наш продукт?']}
+                        buttonText={'Buy me'}
+                    />
+                </div>
+                <div className={b('section')}>
+                    <Section
+                        title={'Hello World!'}
+                        imageSrc={'./images/forest.jpg'}
+                        text={textObject['Для кого наш продукт?']}
+                        buttonText={'Buy me'}
+                        imageLeft={true}
+                    />
                 </div>
             </div>
         );

@@ -3,7 +3,6 @@ import * as React from 'react';
 import { block } from 'bem-cn';
 
 import './index.scss';
-import Section from '../../ui/Section';
 import TextBlock from '../../ui/TextBlock';
 import Title from '../../ui/Title';
 import { Carousel, Button } from 'react-bootstrap';

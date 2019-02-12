@@ -10,21 +10,22 @@ interface SectionProps {
     text?: string;
     title: string;
     imageSrc?: string;
+    imageLeft?: boolean;
 }
 
 const b = block('section');
 
 export default class Section extends React.Component<SectionProps> {
     public render() {
-        const { title, text, imageSrc, buttonText, onClick } = this.props;
+        const { title, text, imageSrc, buttonText, onClick, imageLeft } = this.props;
 
         return (
-            <div className={b()}>
+            <div className={b()} style={{ flexDirection: imageLeft ? 'row' : 'row-reverse' }}>
                 <div className={b('item')}>
-                    {imageSrc && <Image src={imageSrc} style={{ width: '300px', height: '300px' }} />}
+                    {imageSrc && <Image src={imageSrc} style={{ width: '400px', height: '400px' }} />}
                 </div>
                 <div className={b('item')}>
-                    <Jumbotron style={{ width: '300px', height: '300px', borderRadius: '0px' }}>
+                    <Jumbotron style={{ width: '400px', height: '400px', borderRadius: '0px', marginBottom: 0 }}>
                         <h1>{title}</h1>
                         <p>{text}</p>
                         {buttonText && <Button variant="primary" onClick={onClick}>{buttonText}</Button>}
@@ -34,10 +35,3 @@ export default class Section extends React.Component<SectionProps> {
         );
     }
 }
-
-{/*<Section*/}
-{/*title={'Hello World!'}*/}
-{/*imageSrc={'./images/forest.jpg'}*/}
-{/*text={textObject['Для кого наш продукт?']}*/}
-{/*buttonText={'Buy me'}*/}
-{/*/>*/}

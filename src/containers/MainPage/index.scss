@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    justify-content: center;
 
     &__header {
         display: flex;
@@ -21,11 +22,7 @@
         height: 500px;
         background-color: black;
         justify-content: center;
-      
-        &_item {
-          flex-basis: 50%;
-          color: red;
-        }
+        align-items: center;
     }
 
     &__slideshow-container {
